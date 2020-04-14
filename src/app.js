@@ -84,7 +84,7 @@ app.post("/repositories/:id/like", (request, response) => {
   );
   
   if (repositoryIndex < 0) {
-    return response.status(400).json({ error: "ID not found." });
+    return response.status(400).json({ error: "Repository not found." });
   }
 
   repositories[repositoryIndex].likes += 1;
